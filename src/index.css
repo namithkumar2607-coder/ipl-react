@@ -1,0 +1,157 @@
+:root {
+  --primary: #0b2d5b;
+  --accent: #ffb703;
+  --background: #f5f7fa;
+  --text: #222222;
+  --white: #ffffff;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+  padding-top: 70px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--primary);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), #1d4e89);
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h2 {
+  color: var(--accent);
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  margin-bottom: 28px;
+}
+
+.hero button {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 12px 26px;
+  margin: 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.selected {
+  background: var(--white);
+  border-left: 5px solid var(--accent);
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.match-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  border-top: 4px solid var(--accent);
+}
+
+.match-card h3 {
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.prices {
+  font-size: 0.9rem;
+  margin: 8px 0 12px;
+}
+
+.match-card button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .match-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .match-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}
